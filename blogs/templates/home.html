@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="blog-container">
+    <header class="blog-header">
+        <h1>DJANGO BLOGS APP</h1>
+        <p class="subtitle">Welcome to my blogging platform</p>
+    </header>
+
+    <section class="blog-entries">
+        <h2>MY ENTRIES</h2>
+        <div class="entries-list">
+            {% for blog in blogs %}
+                <article class="blog-entry">
+                    <h3 class="entry-title">{{ blog.title }}</h3>
+                    <p class="entry-content">{{ blog.particular }}</p>
+                    <p class="entry-meta">Posted on {{ blog.date }} by {{ blog.author }}</p>
+                </article>
+                <hr class="entry-divider">
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

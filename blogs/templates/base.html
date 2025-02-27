@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} BLOGS {% endblock %} </title>
+    <!-- page description -->
+    <meta name="description" content="This is the description of the page" />
+        
+    <!--keywords for searching-->
+    <meta name="keywords" content="phone, laptop" />
+    
+    <!-- robots is for the commands to the bots-->
+    <!-- values given to robots can be (index),(noindex),(follow),(nofollow)--> 
+    <!-- index - show this page on search-->
+    <!-- noindex - don't show this page on search-->
+    <!-- follow - follow any links on this site-->
+    <!-- nofollow - don,t follow any links on this site-->  
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- author name -->
+    <meta name="author" content="Mr.X" />
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" > 
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
