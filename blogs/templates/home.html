@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block content %}
 <div class="blog-container">
@@ -13,8 +12,8 @@
         <div class="entries-list">
             {% for blog in blogs %}
                 <article class="blog-entry">
-                    <h3 class="entry-title">{{ blog.title }}</h3>
-                    <p class="entry-content">{{ blog.particular }}</p>
+                    <a href="{% url 'detail' blog.slug %}"><h3 class="entry-title">{{ blog.title }}</h3></a>
+                    <p class="entry-content">{{ blog.particular|slice:":30  " }}.....</p>
                     <p class="entry-meta">Posted on {{ blog.date }} by {{ blog.author }}</p>
                 </article>
                 <hr class="entry-divider">

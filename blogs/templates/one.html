@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="detail-container">
+    <header class="detail-header">
+        <form action="{% url 'main' %}">
+            <button type="submit" class="homebutton">HOME</button>
+        </form>
+        <h1 class="detail-title">{{ one.title }}</h1>
+        <hr class="detail-divider">
+    </header>
+
+    <section class="detail-content">
+        <p>{{ one.particular }}</p>
+    </section>
+</div>
+{% endblock %}
