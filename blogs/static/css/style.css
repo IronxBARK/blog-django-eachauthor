@@ -18,18 +18,33 @@ body {
 
 /* Header Styles */
 .blog-header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 0;
-    background-color: #ff4757;
+    background-color: #000000;
     color: #fff;
     border-radius: 8px 8px 0 0;
 }
-
 .blog-header h1 {
     font-size: 2.5rem;
     margin: 0;
 }
+.header-content {
+    display: flex;           
+    justify-content: center; 
 
+}
+
+.createbutton {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
 .blog-header .subtitle {
     font-size: 1.2rem;
     margin: 10px 0 0;
@@ -62,8 +77,9 @@ body {
 
 .entry-title {
     font-size: 1.8rem;
-    color: #ff4757;
+    color: #000000;
     margin: 0 0 10px;
+    
 }
 
 .entry-content {
@@ -83,4 +99,135 @@ body {
     height: 1px;
     background: #eee;
     margin: 20px 0;
+}
+/* Detail Page Styling */
+.detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Header */
+.detail-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.detail-divider {
+    border: 0;
+    height: 2px;
+    background: #eee;
+    width: 100%;
+}
+
+/* Blog Content */
+.detail-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+/* HOME Button */
+.homebutton {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.homebutton:hover {
+    background-color: #e84118;
+}
+a {
+    text-decoration: none;
+}
+
+/* Center the form */
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin: 50px auto; /* Centers the form horizontally */
+}
+
+/* Form title styling */
+.form-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Form layout */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Aligns items in the center */
+}
+
+/* Ensure labels and inputs are in a single row */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Adjust label width and text alignment */
+.input-group label {
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Ensure inputs take up the remaining space */
+.input-group input,
+.input-group textarea,
+.input-group select {
+    flex: 1; /* Takes up remaining space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Align textarea properly */
+.input-group textarea {
+    resize: vertical; /* Allow resizing only vertically */
+    min-height: 100px;
+}
+
+
+/* Submit button styling */
+.styled-form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.styled-form input[type="submit"]:hover {
+    background-color: #218838;
 }

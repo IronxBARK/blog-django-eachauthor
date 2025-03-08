@@ -13,5 +13,9 @@
     <section class="detail-content">
         <p>{{ one.particular }}</p>
     </section>
+    <form action='{% url 'delete' one.slug %}' method='POST'>
+        {% csrf_token %}
+        <button type='submit' class='deletebutton'>DELETE</button>
+    </form>
 </div>
 {% endblock %}
