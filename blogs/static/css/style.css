@@ -45,6 +45,16 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+
+.updatebutton {
+        background-color: #ff4757;
+        color: white;
+        border: none;
+        padding: 5px 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+}
 .blog-header .subtitle {
     font-size: 1.2rem;
     margin: 10px 0 0;
@@ -229,5 +239,92 @@ a {
 }
 
 .styled-form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.logins {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Centering the login container */
+.login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Header Styling */
+.loginheader h1 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Sign-up link styling */
+.login h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #ff4757;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Styling the login form */
+.loginform form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Input fields */
+.loginform input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login button */
+#loginbutton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#loginbutton:hover {
     background-color: #218838;
 }
