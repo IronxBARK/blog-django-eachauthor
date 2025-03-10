@@ -29,7 +29,7 @@
 <body>
     <div class='logins'>
         {% if user.is_authenticated %}
-            <pre>                                                                                           Hi, <strong>{{ user.username }}                                                                               </strong></pre>
+            <pre>                                                                                  Hi, <strong>{{ user.username }}                                                             </strong></pre>
             <form method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
                 <button type="submit" class='logout'>Log out</button>
