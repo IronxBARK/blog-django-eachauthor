@@ -1,33 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="blog-container">
-    <header class="blog-header">
-        <h1>MY LEARNINGS</h1>
-        <div class="header-content">
-            <p class="subtitle">I write about my life learnings</p>
-            <form action='{% url "create" %}'>
-                <button type='submit' class='createbutton'>Create</button>
-            </form>
-        </div>
-    </header>
-    
+<form action='{% url 'main' %}' method='get'>
+    <button type='submit'>ENTRIES</button>
+</form>
 
-    <section class="blog-entries">
-        <h2>MY ENTRIES</h2>
-        <div class="entries-list">
-            {% for blog in blogs %}
-                <article class="blog-entry">
-                    <a href="{{ blog.get_absolute_url }}"><h3 class="entry-title"><strong>{{ blog.title }}</strong></h3></a>
-                    <form action='{% url 'update' blog.slug %}'>
-                        <button type='submit' class='updatebutton'>Update</button>
-                    </form>
-                    <p class="entry-content">{{ blog.particular|slice:":30  " }}.....</p>
-                    <p class="entry-meta">Posted on {{ blog.date }} by {{ blog.author }}</p>
-                </article>
-                <hr class="entry-divider">
-            {% endfor %}
-        </div>
-    </section>
-</div>
 {% endblock %}

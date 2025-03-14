@@ -3,18 +3,21 @@ from .models import BlogEntry
 from django.urls import reverse_lazy
 from .forms import EntryForm 
 from django.contrib import messages
-from django.shortcuts import render, redirect, get_object_or_404
-
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .mixins import LoginRequired
 # Create your views here.
-class MainPage(ListView):
+
+class MainPage(LoginRequired, ListView):
     model = BlogEntry
-    template_name = 'home.html'
+    template_name = 'main.html'
     
     context_object_name = 'blogs'
     
     slug_field = 'slug'
     slug_url_kwargs = 'slug'
+    
+    def get_queryset(self):
+        return BlogEntry.blog.filter(author=self.request.user).order_by('date')
     
 class Detail(DetailView):
     model = BlogEntry
@@ -27,6 +30,10 @@ class Create(CreateView):
     template_name = 'create.html'
     
     success_url = reverse_lazy('main')
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user  # Set the logged-in user as author
+        return super().form_valid(form)
     
 class Update(UpdateView):
     form_class = EntryForm
