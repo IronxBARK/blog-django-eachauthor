@@ -130,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #login 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+#for emails backend with django that displays email in command line
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
